@@ -9,21 +9,27 @@
 /* Begin PBXBuildFile section */
 		3C2ED4EF24E6BB3D00CCA858 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2ED4EE24E6BB3D00CCA858 /* AppDelegate.swift */; };
 		3C2ED4F124E6BB3D00CCA858 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2ED4F024E6BB3D00CCA858 /* SceneDelegate.swift */; };
-		3C2ED4F324E6BB3D00CCA858 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2ED4F224E6BB3D00CCA858 /* ViewController.swift */; };
 		3C2ED4F624E6BB3D00CCA858 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2ED4F424E6BB3D00CCA858 /* Main.storyboard */; };
 		3C2ED4F824E6BB3D00CCA858 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C2ED4F724E6BB3D00CCA858 /* Assets.xcassets */; };
 		3C2ED4FB24E6BB3D00CCA858 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C2ED4F924E6BB3D00CCA858 /* LaunchScreen.storyboard */; };
+		3C2ED50324E6BCE800CCA858 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2ED50224E6BCE800CCA858 /* MainTableViewController.swift */; };
+		3C2ED50524E6C64300CCA858 /* RecipeTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2ED50424E6C64300CCA858 /* RecipeTableCell.swift */; };
+		3C2ED50724E6C70F00CCA858 /* CoctailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2ED50624E6C70F00CCA858 /* CoctailModel.swift */; };
+		3C2ED52724E6CEFD00CCA858 /* CoctailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C2ED52624E6CEFD00CCA858 /* CoctailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3C2ED4EB24E6BB3D00CCA858 /* CoctailsRecipes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoctailsRecipes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3C2ED4EE24E6BB3D00CCA858 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3C2ED4F024E6BB3D00CCA858 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3C2ED4F224E6BB3D00CCA858 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3C2ED4F524E6BB3D00CCA858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3C2ED4F724E6BB3D00CCA858 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C2ED4FA24E6BB3D00CCA858 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C2ED4FC24E6BB3D00CCA858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C2ED50224E6BCE800CCA858 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		3C2ED50424E6C64300CCA858 /* RecipeTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeTableCell.swift; sourceTree = "<group>"; };
+		3C2ED50624E6C70F00CCA858 /* CoctailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailModel.swift; sourceTree = "<group>"; };
+		3C2ED52624E6CEFD00CCA858 /* CoctailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoctailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +64,10 @@
 			children = (
 				3C2ED4EE24E6BB3D00CCA858 /* AppDelegate.swift */,
 				3C2ED4F024E6BB3D00CCA858 /* SceneDelegate.swift */,
-				3C2ED4F224E6BB3D00CCA858 /* ViewController.swift */,
+				3C2ED50224E6BCE800CCA858 /* MainTableViewController.swift */,
+				3C2ED52624E6CEFD00CCA858 /* CoctailViewController.swift */,
+				3C2ED50424E6C64300CCA858 /* RecipeTableCell.swift */,
+				3C2ED50624E6C70F00CCA858 /* CoctailModel.swift */,
 				3C2ED4F424E6BB3D00CCA858 /* Main.storyboard */,
 				3C2ED4F724E6BB3D00CCA858 /* Assets.xcassets */,
 				3C2ED4F924E6BB3D00CCA858 /* LaunchScreen.storyboard */,
@@ -94,7 +103,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = s.k.a.i;
 				TargetAttributes = {
 					3C2ED4EA24E6BB3D00CCA858 = {
@@ -138,9 +147,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3C2ED4F324E6BB3D00CCA858 /* ViewController.swift in Sources */,
+				3C2ED50524E6C64300CCA858 /* RecipeTableCell.swift in Sources */,
 				3C2ED4EF24E6BB3D00CCA858 /* AppDelegate.swift in Sources */,
+				3C2ED52724E6CEFD00CCA858 /* CoctailViewController.swift in Sources */,
+				3C2ED50324E6BCE800CCA858 /* MainTableViewController.swift in Sources */,
 				3C2ED4F124E6BB3D00CCA858 /* SceneDelegate.swift in Sources */,
+				3C2ED50724E6C70F00CCA858 /* CoctailModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,6 +204,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -252,6 +265,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -294,7 +308,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = s.k.a.i.CoctailsRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +326,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = s.k.a.i.CoctailsRecipes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

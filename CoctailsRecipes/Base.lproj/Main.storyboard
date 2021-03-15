@@ -1,24 +1,165 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LkG-Hv-wdT">
+    <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Main Table View Controller-->
+        <scene sceneID="O93-Uj-jgw">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="zgd-a4-CQn" customClass="MainTableViewController" customModule="CoctailsRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="qoJ-Ci-rNj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="recipeCell" rowHeight="100" id="ZcX-jl-meC" customClass="RecipeTableCell" customModule="CoctailsRecipes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZcX-jl-meC" id="Ere-Fu-81y">
+                                    <rect key="frame" x="0.0" y="0.0" width="293" height="100"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xuQ-2v-uUi">
+                                            <rect key="frame" x="0.0" y="0.0" width="273" height="100"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="252" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="44Z-1n-sXc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                                    <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="9iF-vn-N2n"/>
+                                                        <constraint firstAttribute="height" constant="100" id="Cyt-Hl-4uo"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coctail Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRs-lb-0ss">
+                                                    <rect key="frame" x="130" y="37" width="143" height="26"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="19"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="LwO-fQ-esi"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="xuQ-2v-uUi" secondAttribute="trailing" constant="20" id="EdN-gH-d3K"/>
+                                        <constraint firstAttribute="bottom" secondItem="xuQ-2v-uUi" secondAttribute="bottom" id="MAx-a9-8Qs"/>
+                                        <constraint firstItem="xuQ-2v-uUi" firstAttribute="top" secondItem="Ere-Fu-81y" secondAttribute="top" id="PYr-kg-b7j"/>
+                                        <constraint firstItem="xuQ-2v-uUi" firstAttribute="leading" secondItem="Ere-Fu-81y" secondAttribute="leading" id="mtM-VW-fnS"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="coctailNameLabel" destination="VRs-lb-0ss" id="ZIm-RU-MzE"/>
+                                    <outlet property="coctailPictureLabel" destination="44Z-1n-sXc" id="MAP-FG-V2H"/>
+                                    <segue destination="tGd-vk-nc3" kind="show" identifier="showRecipe" id="nTE-iS-PJO"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="zgd-a4-CQn" id="6Ap-wG-uUz"/>
+                            <outlet property="delegate" destination="zgd-a4-CQn" id="bKL-xf-GwT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="XDP-N9-MLX">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Sj4-wx-wd4"/>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D86-ek-VBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="930.43478260869574" y="27.455357142857142"/>
+        </scene>
+        <!--Coctail View Controller-->
+        <scene sceneID="NBe-Qc-Wrh">
+            <objects>
+                <viewController id="tGd-vk-nc3" customClass="CoctailViewController" customModule="CoctailsRecipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I3H-08-m4L">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coctail Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wm4-sy-GRh">
+                                <rect key="frame" x="0.0" y="54" width="320" height="34.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U45-qr-7K6">
+                                <rect key="frame" x="0.0" y="98.5" width="320" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="jBT-g1-FpA"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Recipe:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DnU-dt-4K6">
+                                <rect key="frame" x="0.0" y="308.5" width="320" height="29"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="21"/>
+                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZTf-cP-dB7">
+                                <rect key="frame" x="0.0" y="347.5" width="320" height="139.5"/>
+                                <string key="text">1. White Rum  2. Lime Juice
+3. Sugar Syrup
+4. Mint Leaves
+5. Soda </string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DnU-dt-4K6" firstAttribute="top" secondItem="U45-qr-7K6" secondAttribute="bottom" constant="10" id="16R-jT-Wyp"/>
+                            <constraint firstItem="ZTf-cP-dB7" firstAttribute="trailing" secondItem="LnI-nv-sTq" secondAttribute="trailing" id="1gV-L3-4l3"/>
+                            <constraint firstItem="DnU-dt-4K6" firstAttribute="leading" secondItem="LnI-nv-sTq" secondAttribute="leading" id="6l0-Lk-zAC"/>
+                            <constraint firstItem="wm4-sy-GRh" firstAttribute="top" secondItem="LnI-nv-sTq" secondAttribute="top" constant="10" id="HiI-aN-Ptt"/>
+                            <constraint firstItem="wm4-sy-GRh" firstAttribute="leading" secondItem="LnI-nv-sTq" secondAttribute="leading" id="Mc4-I2-biu"/>
+                            <constraint firstItem="ZTf-cP-dB7" firstAttribute="leading" secondItem="LnI-nv-sTq" secondAttribute="leading" id="QS0-8q-7TY"/>
+                            <constraint firstItem="ZTf-cP-dB7" firstAttribute="top" secondItem="DnU-dt-4K6" secondAttribute="bottom" constant="10" id="R0A-uI-iZI"/>
+                            <constraint firstItem="U45-qr-7K6" firstAttribute="top" secondItem="wm4-sy-GRh" secondAttribute="bottom" constant="10" id="RWh-Hy-DW7"/>
+                            <constraint firstItem="DnU-dt-4K6" firstAttribute="trailing" secondItem="LnI-nv-sTq" secondAttribute="trailing" id="Skc-Js-ijv"/>
+                            <constraint firstItem="U45-qr-7K6" firstAttribute="trailing" secondItem="LnI-nv-sTq" secondAttribute="trailing" id="cmw-RT-1ka"/>
+                            <constraint firstItem="U45-qr-7K6" firstAttribute="leading" secondItem="LnI-nv-sTq" secondAttribute="leading" id="hFw-Rr-7Y5"/>
+                            <constraint firstItem="wm4-sy-GRh" firstAttribute="trailing" secondItem="LnI-nv-sTq" secondAttribute="trailing" id="rEb-UT-os2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LnI-nv-sTq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Xji-F2-L55">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="duH-bb-5oq"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="coctailNameLabel" destination="wm4-sy-GRh" id="VZ0-kS-To3"/>
+                        <outlet property="coctailPictureLabel" destination="U45-qr-7K6" id="WgP-2H-622"/>
+                        <outlet property="recipeLabel" destination="ZTf-cP-dB7" id="b06-EP-Aco"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ZX-6J-GWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2049.375" y="33.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZE3-Du-17T">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="LkG-Hv-wdT" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dec-Au-y6B">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zgd-a4-CQn" kind="relationship" relationship="rootViewController" id="58m-zH-elM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aTp-Qk-nMW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.289855072463769" y="27.455357142857142"/>
         </scene>
     </scenes>
 </document>
